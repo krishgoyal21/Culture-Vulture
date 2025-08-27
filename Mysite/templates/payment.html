@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Payment UI - Direct Options</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/payment.css') }}">
+</head>
+<body>
+
+  <h1>Select Payment Method</h1>
+
+  <div class="payment-options">
+    <div class="option" onclick="showForm('netbanking')">
+      <img src="https://img.icons8.com/fluency/48/bank-building.png"/>
+      <div>Net Banking</div>
+    </div>
+
+    <div class="option" onclick="showForm('debit')">
+      <img src="https://img.icons8.com/color/48/bank-card-back-side.png"/>
+      <div>Debit Card</div>
+    </div>
+
+    <div class="option" onclick="showForm('upi')">
+      <img src="{{ url_for('static', filename='upi.png') }}" />
+      <div>UPI</div>
+    </div>
+  </div>
+
+  <div id="form-display" class="form-section"></div>
+
+  <script>
+    function showForm(method) {
+      let form = document.getElementById("form-display");
+
+      switch(method) {
+        case 'debit':
+          form.innerHTML = `
+            <h2>Enter Debit Card Details</h2>
+            <input type="text" placeholder="Card Number" maxlength="16" />
+            <input type="text" placeholder="Cardholder Name" />
+            <input type="text" placeholder="MM/YY" maxlength="5" />
+            <input type="password" placeholder="CVV" maxlength="3" />
+            <button>Pay Now</button>
+          `;
+          break;
+
+        case 'upi':
+          form.innerHTML = `
+            <h2>Enter your UPI ID</h2>
+            <input type="text" placeholder="example@upi" />
+            <button>Pay Now</button>
+          `;
+          break;
+
+        case 'netbanking':
+          form.innerHTML = `
+            <h2>Select Your Bank</h2>
+            <select>
+              <option value="">--Choose Bank--</option>
+              <option>HDFC</option>
+              <option>SBI</option>
+              <option>ICICI</option>
+              <option>Axis Bank</option>
+            </select>
+            <button>Proceed to Bank</button>
+          `;
+          break;
+
+        default:
+          form.innerHTML = "";
+      }
+    }
+  </script>
+
+</body>
+</html>
+
+
+

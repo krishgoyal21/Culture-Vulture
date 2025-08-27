@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Base Template</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      background-color: black;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 95%;              /* shrink width a bit */
+  margin-left: 20px;       /* push slightly left */
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: transparent;
+  z-index: 1000;
+}
+
+    .nav-left,
+    .nav-right {
+      display: flex;
+      align-items: center;
+    }
+
+    .nav-left a,
+    .nav-right a {
+      margin-right: 30px;
+      text-decoration: none;
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    .nav-right a:last-child {
+      margin-right: 0;
+    }
+
+    .nav-left a:hover,
+    .nav-right a:hover {
+      padding: auto;
+      color: #ddd;
+    }
+
+    /* Optional: to ensure content below navbar is visible */
+    .content {
+      padding-top: 100px;
+    }
+
+    /* For demonstration */
+    body {
+      background: url('https://images.unsplash.com/photo-1549887534-3d8b5c8ed7c8');
+      background-size: cover;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-left">
+      <a href="{{ url_for('home') }}">HOME</a>
+      <a href="{{ url_for('buy_1') }}">BUY</a>
+      <a href="{{ url_for('contact') }}">CONTACT</a>
+    </div>
+    <div class="nav-right">
+      <a href="{{ url_for('login') }}">LOGIN</a>
+      <a href="{{ url_for('cart') }}">CART</a>    </div>
+  </nav>
+
+  <div class="content">
+    {% block content %}
+    {% endblock %}
+  </div>
+</body>
+</html>

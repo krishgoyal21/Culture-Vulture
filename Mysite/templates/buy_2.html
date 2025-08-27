@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Page</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style_buy.css') }}">
+</head>
+<body>
+  <div class="product-container">
+    <div class="product-image">
+     
+      <img src="{{ url_for('static', filename='article1.jpeg') }}" alt="OUT OF MIND" />
+
+    </div>
+    <div class="product-info">
+      <h1>BLU WORLD SHIRT</h1>
+      <p>
+       Stand out in the crowd with the OUT OF MIND graphic tee — a bold expression for those who think differently. Made from premium cotton, this black t-shirt features distorted white typography and a striking red "WYS" in reverse, creating an edgy, artistic design that demands attention. With a relaxed fit and streetwear aesthetic, it’s perfect for everyday style or statement outfits.
+      </p>
+      <h2>Rs. 2,200.00</h2>
+
+      <div class="selectors">
+        <select>
+          <option>XS</option>
+          <option>S</option>
+          <option>M</option>
+          <option>L</option>
+        </select>
+        <select>
+          <option>HALF</option>
+          <option>FULL</option>
+        </select>
+      </div>
+
+      <div class="buttons">
+        <button>Add To Cart</button>
+        <a href="{{ url_for('buy_1') }}" class="secondary">Keep Shopping</a>
+    </div>
+  </div>
+</body>
+</html>

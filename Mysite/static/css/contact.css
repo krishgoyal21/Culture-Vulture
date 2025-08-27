@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: black;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  margin-top: 150px;
+}
+
+.launch {
+  font-size: 38px;
+  margin-bottom: 50px;
+  color: #ccc;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+.launch:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+/* Contact in single line */
+.contact-line {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+.contact-box {
+  text-align: center;
+}
+
+.contact-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+.contact-box img:hover {
+  transform: scale(1.1);
+}
+
+.contact-box p {
+  font-size: 14px;
+  color: #ccc;
+}
+
+.email-link {
+  font-size: 18px;
+  color: white;
+  text-decoration: underline;
+  display: inline-block;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.email-link:hover {
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.logo img {
+  width: 250px;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.3));
+  transition: transform 0.4s ease;
+}
+.logo img:hover {
+  transform: scale(1.05);
+}
+
+.contact-line {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* keeps icons aligned at the top */
+  gap: 120px; /* more spacing */
+  margin-top: 40px;
+}
+
+.contact-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers text under icon */
+  text-align: center;
+}
+
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: Arial, sans-serif;
+      line-height: 1.8;
+      padding: 40px;
+      font-size: 20px; /* Increased base font size */
+    }
+    h1 {
+      text-align: center;
+      font-size: 42px; /* Bigger main heading */
+      margin-bottom: 40px;
+    }
+    h2 {
+      margin-top: 40px;
+      font-size: 28px; /* Bigger section heading */
+    }
+    h3 {
+      margin-top: 25px;
+      font-size: 22px; /* Bigger sub-heading */
+      text-decoration: underline;
+    }
+    p {
+      margin-bottom: 20px;
+      font-size: 20px; /* Larger paragraph text */
+    }
+    ul {
+      margin: 15px 0 25px 30px;
+    }
+    li {
+      margin-bottom: 12px;
+      font-size: 20px; /* Larger list items */
+    }

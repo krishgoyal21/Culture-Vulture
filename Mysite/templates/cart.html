@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/cart.css') }}">
+
+</head>
+<body>
+  <div class="cart-container">
+   
+    <div class="cart-items">
+      <h2>Shopping Bag</h2>
+      <p id="cart-count"></p>
+      <div id="cart-list"></div>
+    </div>
+
+  
+    <div class="cart-summary">
+      <div class="total-box">
+        <p>Cart Subtotal: <span id="cart-subtotal">₹0</span></p>
+        <p>Discount: <span id="cart-discount">₹0</span></p>
+        <hr>
+        <h2>Total: <span id="cart-total">₹0</span></h2>
+        <button class="checkout-btn" onclick="checkout()">Checkout</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='css/cart.js') }}"></script>
+
+
+</body>
+</html>

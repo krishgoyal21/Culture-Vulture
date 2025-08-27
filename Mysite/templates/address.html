@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Address & Payment</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/address.css') }}">
+
+
+</head>
+<body>
+  <div class="address-container">
+    <h2>Shipping Address</h2>
+    <form>
+      <label>Full Name</label>
+      <input type="text" placeholder="Enter your full name" required>
+
+      <label>Street Address</label>
+      <input type="text" placeholder="Enter your street address" required>
+
+      <label>City</label>
+      <input type="text" placeholder="Enter your city" required>
+
+      <label>State</label>
+      <input type="text" placeholder="Enter your state" required>
+
+      <label>ZIP Code</label>
+      <input type="text" placeholder="Enter ZIP code" required>
+
+      <label>Coupon Code</label>
+      <input type="text" placeholder="Enter coupon code">
+
+      <button type="button" onclick="window.location.href='/payment'">Click to Pay</button>
+
+    </form>
+  </div>
+</body>
+</html>

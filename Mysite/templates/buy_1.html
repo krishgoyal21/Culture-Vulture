@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Collection</title>
+<style>/* Reset & Base Styles */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+    body {
+        background-color: #000;
+        color: #fff;
+        font-family: 'Helvetica Neue', Arial, sans-serif;
+        margin: 0;
+        padding: 20px 20px; /* remove top & bottom padding */
+    }
+
+    .top-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0; /* remove all margins */
+        padding: 0; /* remove padding if any */
+    }
+
+    .top-image img {
+        display: block;
+        max-width: 500px;
+        height: auto;
+        margin-bottom: -10px;
+        margin-top: 10px; 
+    }
+      
+      /* Product Grid */
+      .products {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 70px;
+      }
+      
+      /* Product Card */
+      .product-card {
+        margin-top: 60px;
+        width: 370px;
+        height: auto;
+        text-align: center;
+      }
+      
+      .product-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+      }
+      
+      .product-card img:hover {
+        transform: scale(1.03);
+      }
+      
+      .name {
+        margin-top: 12px;
+        font-size: 20px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+      }
+      
+      .price {
+        font-size: 18px;
+        color: #ccc;
+        margin-top: 4px;
+      }</style>
+
+</head>
+<body>
+  {% extends "base.html" %}
+
+{% block content %}
+<main>
+  <div class="top-image">
+    <img src="{{ url_for('static', filename='CULTURE_VULTURE-removebg-preview.png') }}" alt="Culture Vulture Logo">
+  </div>
+
+  <section class="products">
+    <div class="product-card">
+      <a href="{{ url_for('buy_2') }}">
+        <img src="{{ url_for('static', filename='article.3.png') }}" alt="Product 1">
+      </a>
+      <p class="name">Oversized Red T-shirt</p>
+      <p class="price">Rs.1200</p>
+    </div>
+  
+    <div class="product-card">
+      <a href="{{ url_for('buy_3') }}">
+        <img src="{{ url_for('static', filename='Untitled design.png') }}" alt="Product 2">
+      </a>
+      <p class="name">Out Of Mind</p>
+      <p class="price">Rs.1500</p>
+    </div>
+  
+    <div class="product-card">
+      <a href="{{ url_for('buy_4') }}">
+        <img src="{{ url_for('static', filename='article.2orangecroc fs.png') }}" alt="Product 3">
+      </a>
+      <p class="name">Orange Croc</p>
+      <p class="price">Rs.1700</p>
+    </div>
+  </section>
+</main>
+{% endblock %}
+
+</body>
+</html>

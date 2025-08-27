@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding: 40px;
+}
+
+.product-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  align-items: flex-start;
+  
+}
+
+.product-image img {
+  width: 400px;
+  border-radius: 10px;
+}
+
+.product-image{
+    margin-right: 250px;
+    margin-top: 70px;
+}
+
+.product-info {
+  max-width: 500px;
+  margin-top: 100px; 
+}
+
+
+.product-info h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.product-info p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.product-info h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+.selectors {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 8px 12px;
+  background: #222;
+  color: white;
+  border: 1px solid #555;
+  border-radius: 5px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  margin-right: 10px;
+  border: none;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.secondary {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.care summary {
+  margin-top: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.care p {
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+
+.product-image img {
+  width: 400px;
+  border-radius: 10px;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.product-image img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+
+
+
